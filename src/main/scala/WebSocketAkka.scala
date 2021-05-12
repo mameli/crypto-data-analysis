@@ -35,7 +35,7 @@ object WebSocketAkka extends App {
       .mapAsync(1)(m => m)
       .map(msg => {
         system.log.info(s"producing $msg")
-        new ProducerRecord[String, String]("test", msg)
+        new ProducerRecord[String, String]("testTopic", msg)
       })
       .log("producer")
 

@@ -23,3 +23,6 @@ services:
         "INTERNAL:PLAINTEXT,\
          EXTERNAL:PLAINTEXT"
       KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
+      KAFKA_CREATE_TOPICS: "testTopic:1:1"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
